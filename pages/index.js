@@ -1,5 +1,4 @@
 import React from "react";
-import { useRouter } from 'next/router'
 const bcrypt = require('bcryptjs');
 
 export default class Index extends React.Component {
