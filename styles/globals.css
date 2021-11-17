@@ -81,3 +81,9 @@ output {
   font-weight: bold;
   font-size: 16px;
 }
+
+@media only screen and (max-width: 800px) {
+  form{
+    width: 80%;
+  }
+}
