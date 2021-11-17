@@ -14,3 +14,70 @@ a {
 * {
   box-sizing: border-box;
 }
+
+div{
+  display: flex;
+  flex: 1 1;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b5397;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 10px 0px;
+}
+
+input {
+  padding: 5px 0px;
+  margin: 5px 0px;
+  border-radius: 5px;
+  border: solid #5a5a5a;
+  padding: 10px;
+}
+
+input[type^=submit]{
+  background-color: #0b5397;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+button{
+  background-color: #0b5397;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+output {
+  padding: 10px;
+  border-radius: 5px;
+  border: solid #ff0000;
+  margin: 10px 0px;
+  color: white;
+  background-color: #fd4141;
+  font-weight: bold;
+  font-size: 16px;
+}
