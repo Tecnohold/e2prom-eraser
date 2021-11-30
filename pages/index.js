@@ -31,13 +31,24 @@ export default class Index extends React.Component {
   hexXOR(hex1, hex2) {
     var temp = 0;
     let xor = "";
+    let bytes = []
     for (let i = 0; i < hex1.length; i += 2) {
       temp = parseInt(hex1.substr(i, 2), 16);
       for(let j = 0; j < hex2.length; j += 2) {
         temp ^= parseInt(hex2.substr(j, 2), 16);        
       }      
-      xor += temp > 15 ? temp.toString(16).toUpperCase() : "0" + temp.toString(16).toUpperCase();
+      console.log(temp);
+      bytes.push(temp);      
     }
+
+    for(let counter = 0; counter < 4; counter++){
+      var operatorA = (Math.floor(bytes[counter] / 10)) > 0 ? Math.floor((bytes[counter] / 10)) : 1;
+		  var operatorB = (Math.floor(bytes[3 - counter] % 10)) > 0 ? Math.floor((bytes[3 - counter] % 10)) : 1;
+      bytes[counter] = operatorA * operatorB;
+      console.log(temp);
+      xor += bytes[counter] < 10 ? "0" + bytes[counter].toString() : bytes[counter].toString();
+    }    
+
     return xor;
   }
 
