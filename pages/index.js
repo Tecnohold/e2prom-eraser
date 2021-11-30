@@ -37,16 +37,16 @@ export default class Index extends React.Component {
       for(let j = 0; j < hex2.length; j += 2) {
         temp ^= parseInt(hex2.substr(j, 2), 16);        
       }      
-      console.log(temp);
+      
       bytes.push(temp);      
     }
 
     for(let counter = 0; counter < 4; counter++){
       var operatorA = (Math.floor(bytes[counter] / 10)) > 0 ? Math.floor((bytes[counter] / 10)) : 1;
 		  var operatorB = (Math.floor(bytes[3 - counter] % 10)) > 0 ? Math.floor((bytes[3 - counter] % 10)) : 1;
-      bytes[counter] = operatorA * operatorB;
-      console.log(temp);
-      xor += bytes[counter] < 10 ? "0" + bytes[counter].toString() : bytes[counter].toString();
+      temp = operatorA * operatorB;
+
+      xor += temp < 10 ? "0" + temp.toString() : temp.toString();
     }    
 
     return xor;
